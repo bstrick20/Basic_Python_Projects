@@ -1,0 +1,67 @@
+import time #Use time to make it feel more like a game. 
+
+print("Welcome to my computer quiz!")
+time.sleep(2)
+playing = input("Do you want to play? ")
+
+if playing.lower() == "yes": #lowercase all inputs so it will accept any case. 
+    print("Let's begin....")
+else:
+    print("Fine! Find something else to play!")
+    quit()
+
+correct = 0           #this is to keep track of the score
+incorrect = 0
+
+time.sleep(2)
+answer = input("What does CPU stand for? ")
+if answer.lower() == "central processing unit":
+    print("Great job!")
+    correct += 1                              #adds +1 every time you get an answer correct   
+    time.sleep(2)
+    print("On to the next one...")
+else:
+    print("WRONG! Got you!!")
+    incorrect += 1
+    time.sleep(2)
+    print("Let's see if you can get the next one!!")
+time.sleep(2)
+answer = input("What port is SSH? ")
+if answer == "22":
+    print("Correct!")
+    correct += 1
+    time.sleep(2)
+    print("NEXT QUESTION!...")
+else:
+    print("Incorrect! Hit the books!!")
+    incorrect += 1
+    time.sleep(2)
+    print("Let's see if you can get the next one!!")
+time.sleep(2)
+answer = input("What does GPU stand for? ")
+if answer.lower() == "graphics processing unit":
+    print("Correct!")
+    correct += 1
+    time.sleep(2)
+    print("NEXT QUESTION!...")
+else:
+    print("Incorrect! Hit the books!!")
+    incorrect += 1
+    time.sleep(2)
+    print("Let's see if you can get the next one!!")
+time.sleep(2)
+answer = input("What does PSU stand for? ")
+if answer.lower() == "power supply":
+    print("Correct!")
+    correct += 1
+    time.sleep(2)
+    print("NEXT QUESTION!...")
+else:
+    print("Incorrect! Hit the books!!")
+    incorrect += 1
+    time.sleep(2)
+    print("Game Over!!")
+time.sleep(2)
+
+print("You got " + str(correct) + " questions correct and " + str(incorrect) + " wrong! Good game!") #have to str(correct) because the answers are strings and not ints.
+print("You got a " + int(str((correct/4) * 100)) + "%! Good game!!") #giving the player a score percentage 
